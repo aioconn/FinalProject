@@ -1,0 +1,190 @@
+<!--
+ Filename: finalRelease.html
+ Written by: Aiden O'Connor	(AO)
+ Purpose: Final release of web page
+ Date: December 12, 2019
+ Modification History:
+12/04/2019: Original Build (AO)
+12/09/2019: Made custom validation part (AO)
+12/12/2019: Fix up for final release
+2/4/2021: Fixed a lot of things up
+ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+
+    <title>Custom Form Validation</title>
+    <link rel="Stylesheet" type="text/css" href="finalRelease.css"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/additional-methods.min.js"></script>
+    <script src="finalRelease.js"></script>
+    <link rel="Stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/black-tie/jquery-ui.css"/>
+
+
+
+</head>
+
+<body>
+
+<h1 id="website_name">Aesthetic Photography</h1>
+
+<div id="photo"></div>
+
+<div id="tabs" >
+    <ul>
+        <!--
+        <li><a href="#tabs-1"><span>About Us</span></a></li>
+        <li><a href="#tabs-2"><span>Gallery</span></a></li>
+        <li><a href="#tabs-3"><span>Weddings</span></a></li>
+        <li><a href="#tabs-4"><span>Modeling</span></a></li>
+        <li><a href="#tabs-5"><span>Events</span></a></li>
+        <li><a href="#tabs-6"><span>Pricing</span></a></li>
+        -->
+
+        <li><a href="#tabs-7" id="focus"><span>Book a Session</span></a></li>
+        <li><a href="#tabs-8"><span>Classes</span></a></li>
+        <!--
+        <li><a href="#tabs-9"><span>Our Photographers</span></a></li>
+        <li><a href="#tabs-10"><span>Contact Us</span></a></li>
+        -->
+    </ul>
+    <!--
+    <div id="tabs-1">
+        This will be a tab explaining all about Aesthetic Photography.
+    </div>
+    <div id="tabs-2">
+        This will be a tab with multiple pictures and labels to go with them.
+    </div>
+    <div id="tabs-3">
+        This tab will explain everything that goes on with wedding photography
+        including pricing, amount of time, and much more.
+    </div>
+    <div id="tabs-4">
+        This tab will talk about model photography. It'll explain what the process would
+        be like and what kind of modeling would take place. It will show examples as well.
+    </div>
+    <div id="tabs-5">
+        This would be just like the modeling and wedding tabs but it is referring to any other
+        special type of event (graduation, baby showers, festivals,etc...).
+    </div>
+    <div id="tabs-6">
+        This tab would explain pricing for classes and hiring a photographer for each kind
+        of event.
+    </div>
+    -->
+    <div id="tabs-7">
+
+        <form id="scheduleForm" onsubmit="return false">
+            Please fill out the form below to schedule a session
+            <label for="firstName2">First Name:</label><br>
+            <input type="text" id="firstName2" name="firstName2">
+            <label for="lastName2"><br><br>Last Name:</label><br>
+            <input type="text" id="lastName2" name="lastName2">
+            <label for="phoneNumber2"><br><br>Phone Number:</label><br>
+            <input type="tel" id="phoneNumber2" name="phoneNumber2" placeholder="1234567890"><br>
+            <label for="emailAddress2"><br>Email Address:</label><br>
+            <input type="email" id="emailAddress2" name="emailAddress2" placeholder="johnsmith@some.com">
+            <label for="password"><br><br>Password(for your account):</label><br>
+            <input type="password" id="password" name="password"><br><br>
+            <label for="schedule2">Date:</label><br>
+            <input type="text" id="schedule2" name="schedule2">
+            <label for="time"><br><br>Preferred time for session:</label><br>
+            <input type="text" id="time" name="time" placeholder="Night,day,etc.."><br>
+            <small>Put "no preference" if it doesn't matter</small><br>
+            <div>
+                <p>How many Photographers needed:</p>
+                <label for="radioPhoto">1</label>
+                <input type="radio" name="radiobutton" id="radioPhoto" value="1">
+                <label for="radioPhoto2">2</label>
+                <input type="radio" name="radiobutton" id="radioPhoto2" value="2">
+                <label for="radioPhoto3">3+</label>
+                <input type="radio" name="radiobutton" id="radioPhoto3" value="3+">
+            </div>
+            <div id="checkboxes">
+                <p>What kind of event:</p>
+                <label for="checkboxEvent">Wedding</label>
+                <input type="checkbox" name="check" id="checkboxEvent" value="Wedding">
+                <label for="checkboxEvent2">Modeling</label>
+                <input type="checkbox" name="check" id="checkboxEvent2" value="Modeling">
+                <label for="checkboxEvent3">Other Event</label>
+                <input type="checkbox" name="check" id="checkboxEvent3" value="Other Event">
+                <label for="otherEvent"><br><br>If you checked Other Event, please explain below:<br></label>
+                <textarea id="otherEvent"></textarea>
+                <br><br>
+            </div>
+            <label for="slider">Price Range:</label>
+            <input id="slider" name="slider">
+            <div id="sliderRange"></div>
+            <br>
+            <br>
+            <button type="submit" id="formSubmit" value="submit" >Submit</button>
+            <br>
+            <br>
+            <input type="reset" value="reset" id="eventReset"/>
+        </form>
+        <br>
+
+            <div id = outputArea2></div>
+
+        <br>
+
+
+
+
+    </div>
+    <div id="tabs-8" >
+        <!-- Don't use this form, not completed! -->
+        <h2>Please select the date of the class and fill out the form to register!</h2>
+        1/8/2020 Beginner's class<br>
+        1/22/2020 Winter Landscape Photography<br>
+        2/7/2020 Advanced Lens work
+        <br>
+        <br>
+        <form id="myForm" onsubmit="return false">
+            <label for="schedule">Date:</label><br>
+            <input type="text" id="schedule">
+            <label for="firstName"><br><br>First Name:</label><br>
+            <input type="text" id="firstName">
+            <label for="lastName"><br><br>Last Name:</label><br>
+            <input type="text" id="lastName">
+            <label for="phoneNumber"><br><br>Phone Number:</label><br>
+            <input type="tel" id="phoneNumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><br>
+            <small>Format: 123-456-7890</small>
+            <label for="emailAddress"><br><br>Email Address:</label><br>
+            <input type="email" id="emailAddress">
+            <label for="experience"><br><br>Years of Experience:</label><br>
+            <input type="text" id="experience">
+            <label for="camera"><br><br>Type of Camera:</label><br>
+            <input type="text" id="camera"><br><br>
+            <input type="reset" value="reset" id="reset"/>
+        </form>
+        <br>
+        <button type="button" id="classSubmit" value="submit">Submit</button>
+        <br>
+        <br>
+        <br>
+        <label for=outputArea></label><textarea id = outputArea></textarea>
+
+    </div>
+    <!--
+    <div id="tabs-9">
+        This tab will tell all about our photographers
+    </div>
+    <div id="tabs-10">
+        This tab will list all the contact information needed in order to contact the company
+        (email, phone number, address)
+    </div>
+    -->
+
+</div>
+
+
+</body>
+
