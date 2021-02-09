@@ -116,12 +116,12 @@ $(document).ready(function(){
     $("#camera").autocomplete({
         source: ["canon", "nikon", "sony", "olympus", "fujifilm", "pentax", "leica"]
     });
-    $("#time").autocomplete({
+    $('#time').autocomplete({
         source: ["day", "night", "morning", "dawn", "dusk", "evening", "none", "golden hours", "no preference"]
     });
 
     //Price Range slider
-    $( "#sliderRange" ).slider({
+    $('#sliderRange').slider({
         range: true,
         min: 0,
         max: 10000,
@@ -130,7 +130,7 @@ $(document).ready(function(){
             $( "#slider" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
         }
     });
-    $( "#slider" ).val( "$" + $( "#sliderRange" ).slider( "values", 0 ) +
+    $( '#slider' ).val( "$" + $( '#sliderRange' ).slider( "values", 0 ) +
         " - $" + $( "#sliderRange" ).slider( "values", 1 ) );
 
     //spinner in class tab
