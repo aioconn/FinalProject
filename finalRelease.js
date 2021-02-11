@@ -214,4 +214,30 @@ $(document).ready(function(){
         $("#outputArea2").append("<br/>" + rangeString);
     }
 
+    function disableScrolling(){
+        let x=window.scrollX;
+        let y=window.scrollY;
+        window.onscroll=function(){window.scrollTo(x, y);};
+    }
+
+    function enableScrolling(){
+        window.onscroll=function(){};
+    }
+
+    let modal = document.getElementById("myModal");
+    let modalImg = document.getElementById("img01");
+
+    $(".img").click(function(){
+        modal.style.display = "block";
+        modalImg.src = this.src
+        disableScrolling()
+    });
+
+    let span = document.getElementsByClassName("close")[0];
+
+    span.onclick = function() {
+        modal.style.display = "none";
+        enableScrolling()
+    }
+
 });

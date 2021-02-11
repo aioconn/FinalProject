@@ -16,10 +16,8 @@
 <head>
 
     <meta charset="utf-8">
-
     <title>Custom Form Validation</title>
     <link rel="Stylesheet" type="text/css" href="finalRelease.css"/>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
@@ -27,58 +25,42 @@
     <script src="finalRelease.js"></script>
     <link rel="Stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/black-tie/jquery-ui.css"/>
 
-
-
 </head>
 
 <body>
+
+<div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01" alt="not sure">
+</div>
 
 <h1 id="website_name">Aesthetic Photography</h1>
 
 <div id="photo"></div>
 
-<div id="tabs" >
+<div id="tabs" class="tabs" >
     <ul>
-        <!--
-        <li><a href="#tabs-1"><span>About Us</span></a></li>
         <li><a href="#tabs-2"><span>Gallery</span></a></li>
-        <li><a href="#tabs-3"><span>Weddings</span></a></li>
-        <li><a href="#tabs-4"><span>Modeling</span></a></li>
-        <li><a href="#tabs-5"><span>Events</span></a></li>
-        <li><a href="#tabs-6"><span>Pricing</span></a></li>
-        -->
+
 
         <li><a href="#tabs-7" id="focus"><span>Book a Session</span></a></li>
         <li><a href="#tabs-8"><span>Classes</span></a></li>
-        <!--
-        <li><a href="#tabs-9"><span>Our Photographers</span></a></li>
-        <li><a href="#tabs-10"><span>Contact Us</span></a></li>
-        -->
+
     </ul>
-    <!--
-    <div id="tabs-1">
-        This will be a tab explaining all about Aesthetic Photography.
-    </div>
     <div id="tabs-2">
-        This will be a tab with multiple pictures and labels to go with them.
+        <div class="gallery">
+            <img class="img" src="theme/images/alexandru-zdrobau--djRG1vB1pw-unsplash.jpg" alt="girl with coat">
+            <img class="img" src="theme/images/annie-spratt-hS46bsAASwQ-unsplash.jpg" alt="rocks and succulents">
+            <img class="img" src="theme/images/austin-schmid-ZmKyn-LpUCw-unsplash.jpg" alt="winter wilderness">
+            <img class="img" src="theme/images/darryl-brian-bDn1Wi1ixLw-unsplash.jpg" alt="starry night and desert mountain">
+            <img class="img" src="theme/images/nastya-dulhiier-nVmGFQaGKZw-unsplash.jpg" alt="architecture">
+            <img class="img" src="theme/images/sidney-severin-uTwbPF-CGMs-unsplash.jpg" alt="sunset">
+            <img class="img" src="theme/images/stavrialena-gontzou-kTE9-Ke1RvQ-unsplash.jpg" alt="girl on the ground">
+            <img class="img" src="theme/images/suhyeon-choi-9Lpv1yhf-NM-unsplash.jpg" alt="bride close up">
+            <img class="img" src="theme/images/henry-chen-x7clQSWhlfE-unsplash.jpg" alt="city at night">
+        </div>
     </div>
-    <div id="tabs-3">
-        This tab will explain everything that goes on with wedding photography
-        including pricing, amount of time, and much more.
-    </div>
-    <div id="tabs-4">
-        This tab will talk about model photography. It'll explain what the process would
-        be like and what kind of modeling would take place. It will show examples as well.
-    </div>
-    <div id="tabs-5">
-        This would be just like the modeling and wedding tabs but it is referring to any other
-        special type of event (graduation, baby showers, festivals,etc...).
-    </div>
-    <div id="tabs-6">
-        This tab would explain pricing for classes and hiring a photographer for each kind
-        of event.
-    </div>
-    -->
+
     <div id="tabs-7">
 
         <form id="scheduleForm" onsubmit="return false">
@@ -173,15 +155,7 @@
         <label for=outputArea></label><textarea id = outputArea></textarea>
 
     </div>
-    <!--
-    <div id="tabs-9">
-        This tab will tell all about our photographers
-    </div>
-    <div id="tabs-10">
-        This tab will list all the contact information needed in order to contact the company
-        (email, phone number, address)
-    </div>
-    -->
+
 
 </div>
 
